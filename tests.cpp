@@ -37,8 +37,10 @@ string formatTimeToAMPM(int hours, int minutes)
     {
         throw logic_error("invalid time");
     }
+    
     bool isPM = (hours >= 12);
     int hour12 = hours % 12;
+    
 //-----------------------------------------------------------------------------------
 // Testing code
 
