@@ -1,53 +1,69 @@
+//----------------------------------------------------------
+// CS161 Assignment Starter Code
+// Copyright Andrew Scholer (ascholer@chemeketa.edu)
+// Neither this code, nor any works derived from it
+//    may be republished without approval.
+//----------------------------------------------------------
+
+// Bring in unit testing code and tell it to build a main function
+// If you have multiple unit test files, only one should have this define
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+
 #include "doctest.h"
 
+// Use Approx from doctest without saying doctest::Approx
 using doctest::Approx;
 
-int squareDifference(int a, int b)
-{
-  return (a - b) * (a - b);
-}
+//-----------------------------------------------------------------------------------
 
-double distance(int x1, int y1, int x2, int y2)
-{
-  return sqrt(squareDifference(x1, x2) + squareDifference(y1, y2));
-}
+#include <format>
+#include <iostream>
+#include <string>
+using namespace std;
 
-TEST_CASE("squareDifference")
-{
-  // if a CHECK fails, the test case as a whole will fail, but still
-  // try the rest of the assertions.
-  CHECK(squareDifference(1, 4) == 9);
+// Functions to write.
+// You do NOT need to write doxygen comments for these. You may add extra helper
+// functions if you want. Work on them one at a time.
 
-  // if a REQUIRE fails, the rest of the assertions in this
-  // test case aren't even worth trying---just move on to the next
-  // test case.
-  REQUIRE(squareDifference(1, 4) == 9);
+// string formatTimeToAMPM(int hours, int minutes)
 
-  // Test that ordering does not matter
-  CHECK(squareDifference(4, 1) == 9);
+// string reformatTime(const string& time24)
 
-  // Test that negatives are handled
-  int answer3 = squareDifference(-2, -6);
-  CHECK(answer3 == 16);
-}
+//-----------------------------------------------------------------------------------
+// Testing code
 
-TEST_CASE("distance")
-{
-  int x1 = 0, y1 = 0;
-  int x2 = 3, y2 = 4;
-  int x3 = -2, y3 = -2;
+// TEST_CASE("formatTimeToAMPM")
+// {
+//   cout << "1: formatTimeToAMPM" << endl;
+//   CHECK(formatTimeToAMPM(17, 54) == "5:54 PM");
+//   CHECK(formatTimeToAMPM(12, 30) == "12:30 PM");
+//   CHECK(formatTimeToAMPM(3, 5) == "3:05 AM");
+//   CHECK(formatTimeToAMPM(0, 0) == "12:00 AM");
+// }
 
-  // Approx sees if a double value is "close enough" to believe that any
-  // difference is based on rounding error.  Always test doubles using
-  // Approx.  It only exists in unit tests---do not use in normal code.
-  CHECK(distance(x1, y1, x2, y2) == Approx(5.0));
+// TEST_CASE("formatTimeToAMPM exception")
+// {
+//   cout << "2: formatTimeToAMPM exception handling" << endl;
+//   CHECK_THROWS(formatTimeToAMPM(24, 0));
+//   CHECK_THROWS(formatTimeToAMPM(12, 60));
+//   CHECK_THROWS(formatTimeToAMPM(-1, 0));
+//   CHECK_THROWS(formatTimeToAMPM(0, -1));
+// }
 
-  // Check reverse direction
-  CHECK(distance(x2, y2, x1, y1) == Approx(5.0));
+// TEST_CASE("reformatTime")
+// {
+//   cout << "3: reformatTime" << endl;
+//   CHECK(reformatTime("17:54:48") == "5:54 PM");
+//   CHECK(reformatTime("12:30:15") == "12:30 PM");
+//   CHECK(reformatTime("03:05:09") == "3:05 AM");
+//   CHECK(reformatTime("00:00:00") == "12:00 AM");
+// }
 
-  // Test some negative coordinate values
-  double answer2 = distance(x1, y1, x3, y3);
-  double answer2Desired = 2 * sqrt(2);
-  CHECK(answer2 == Approx(answer2Desired));
-}
+// TEST_CASE("reformatTime bad times")
+// {
+//   cout << "4: reformatTime exception handling" << endl;
+//   CHECK(reformatTime("11:60:12") == "???"); // minutes invalid
+//   CHECK(reformatTime("11:99:12") == "???"); // minutes invalid
+//   CHECK(reformatTime("25:11:12") == "???"); // hours invalid
+//   CHECK(reformatTime("99:11:12") == "???"); // hours invalid
+// }
