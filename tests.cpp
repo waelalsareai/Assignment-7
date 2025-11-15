@@ -37,6 +37,7 @@ string formatTimeToAMPM(int hours, int minutes)
     {
         throw logic_error("invalid time");
     }
+    
 //-----------------------------------------------------------------------------------
 // Testing code
 
