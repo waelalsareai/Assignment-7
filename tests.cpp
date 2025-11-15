@@ -41,6 +41,8 @@ string formatTimeToAMPM(int hours, int minutes)
     bool isPM = (hours >= 12);
     int displayHour = hours % 12;
     if (displayHour == 0) displayHour =12;
+
+    
 //-----------------------------------------------------------------------------------
 // Testing code
 
