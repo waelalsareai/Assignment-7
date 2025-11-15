@@ -33,7 +33,10 @@ using namespace std;
 string formatTimeToAMPM(int hours, int minutes)
 {
     // check for invalid hour/minute
-    
+    if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59)
+    {
+        throw logic_error("invalid time");
+    }
 //-----------------------------------------------------------------------------------
 // Testing code
 
