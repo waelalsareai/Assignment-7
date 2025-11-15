@@ -45,7 +45,9 @@ string formatTimeToAMPM(int hours, int minutes)
     string minuteStr = (minutes < 10 ? "0" : "") + to_string(minutes);
     string ampm = isPM ? "PM" : "AM";
 
-    
+    string result = to_string(displayHour) + ":" + minuteStr + " " + ampm;
+return result;
+}
 //-----------------------------------------------------------------------------------
 // Testing code
 
