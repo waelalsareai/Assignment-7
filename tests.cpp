@@ -30,7 +30,9 @@ using namespace std;
 
 // string reformatTime(const string& time24)
 
-
+string formatTimeToAMPM(int hours, int minutes)
+{
+    // check for invalid hour/minute
 //-----------------------------------------------------------------------------------
 // Testing code
 
