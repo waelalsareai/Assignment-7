@@ -19,6 +19,7 @@ using doctest::Approx;
 #include <format>
 #include <iostream>
 #include <string>
+#include <stcexpect
 using namespace std;
 
 // Functions to write.
