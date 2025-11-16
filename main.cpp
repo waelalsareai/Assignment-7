@@ -56,4 +56,10 @@ int main()
         return 1;
     }
     
-  
+  // headings
+    cout << endl;
+    cout << left  << setw(20) << "Name"
+         << left  << setw(12) << "Time"
+         << right << setw(8)  << "Minutes" << endl;
+    cout << string(40, '-') << endl;
+
