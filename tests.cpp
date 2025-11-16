@@ -56,6 +56,14 @@ string reformatTime(const string& time24)
     int seconds = stoi(time24.substr(6, 2));
     (void)seconds;
 
+    try {
+        return formatTimeToAMPM(hours, minutes);
+    }
+    catch (const logic_error&) {
+        return "???";
+    }
+}
+
 //-----------------------------------------------------------------------------------
 // Testing code
 
