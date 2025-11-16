@@ -49,7 +49,12 @@ string formatTimeToAMPM(int hours, int minutes)
 return result;
 }
 
+string reformatTime(const string& time24)
+{
+    int hours = stoi(time24.substr(0, 2));
+    int minutes = stoi(time24.substr(3, 2));
 
+    
 //-----------------------------------------------------------------------------------
 // Testing code
 
