@@ -43,4 +43,9 @@ string reformatTime(const string& time24)
 
 int main()
 {
-  
+  // ask for username
+    cout << "Enter username: ";
+    string targetUser;
+    cin >> targetUser;
+
+    
