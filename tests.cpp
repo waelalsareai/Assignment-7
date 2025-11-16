@@ -53,7 +53,8 @@ string reformatTime(const string& time24)
 {
     int hours = stoi(time24.substr(0, 2));
     int minutes = stoi(time24.substr(3, 2));
-    
+    int seconds = stoi(time24.substr(6, 2));
+    (void)seconds;
 
 //-----------------------------------------------------------------------------------
 // Testing code
