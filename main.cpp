@@ -48,4 +48,10 @@ int main()
     string targetUser;
     cin >> targetUser;
 
-    
+  // open the log file
+    ifstream in("WebLog.txt");
+    if (!in)
+    {
+        cout << "Could not open WebLog.txt" << endl;
+        return 1;
+    }  
