@@ -69,4 +69,6 @@ int main()
 
     // read each record
     while (in >> ip >> username >> time24 >> minutes)
-  {  
+  {
+    if (username == targetUser)
+  }  
