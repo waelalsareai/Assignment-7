@@ -71,4 +71,5 @@ int main()
     while (in >> ip >> username >> time24 >> minutes)
   {
     if (username == targetUser)
-  {  
+  {
+
