@@ -43,5 +43,4 @@ string reformatTime(const string& time24)
 
 int main()
 {
-  cout << "Hello world" << endl;
-}
+  
