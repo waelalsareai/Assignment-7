@@ -63,4 +63,10 @@ int main()
          << right << setw(8)  << "Minutes" << endl;
     cout << string(40, '-') << endl;
 
-    
+  string ip, username, time24;
+    int minutes;
+    int totalMinutes = 0;
+
+    // read each record
+    while (in >> ip >> username >> time24 >> minutes)
+  {  
