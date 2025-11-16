@@ -1,5 +1,8 @@
 #include <iostream>
-#in
+#include <fstream>
+#include <string>
+#include <iomanip>
+#include <stdexcept>
 
 using namespace std;
 
