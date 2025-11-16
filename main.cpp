@@ -77,5 +77,9 @@ int main()
             cout << left  << setw(20) << username
                  << left  << setw(12) << time12
                  << right << setw(8)  << minutes << endl;
-            
+            totalMinutes += minutes;
+  }
+}
+
+cout << string(40, '-')
 
