@@ -72,5 +72,9 @@ int main()
   {
     if (username == targetUser)
   {
-    
+    string time12 = reformatTime(time24);
+
+            cout << left  << setw(20) << username
+                 << left  << setw(12) << time12
+                 << right << setw(8)  << minutes << endl;
 
