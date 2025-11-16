@@ -82,5 +82,8 @@ int main()
 }
 
 cout << string(40, '-') << endl;
-cout << "Total minutes: " << 
+cout << "Total minutes: " << totalMinutes << endl;
+
+return 0;
+}
 
