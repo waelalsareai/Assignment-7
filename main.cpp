@@ -54,4 +54,6 @@ int main()
     {
         cout << "Could not open WebLog.txt" << endl;
         return 1;
-    }  
+    }
+    
+  
