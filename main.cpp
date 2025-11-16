@@ -81,5 +81,6 @@ int main()
   }
 }
 
-cout << string(40, '-')
+cout << string(40, '-') << endl;
+cout << "Total minutes: " << 
 
